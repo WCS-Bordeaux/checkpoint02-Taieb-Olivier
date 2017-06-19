@@ -5,18 +5,18 @@
     </p>
     <hr>
     <div class="row">
-        <div class="s12">
+        <div class="s12" ng-repeat="user in ::$ctrl.users track by $index">
             <!-- besoin de boucler ! -->
             <div>
-                <div><i class="material-icons">person</i>Kristen Dillon</div>
-                <div><i class="material-icons">work</i>INTERFIND</div>
-                <div><i class="material-icons">email</i>kristen.dillon@interfind.name</div>
-                <div><i class="material-icons">phone</i>+1 (906) 483-3623</div>
-                <div>
+                <div><i class="material-icons">person</i>{{user[0].name.first}}</div>
+                <div><i class="material-icons">work</i>{{user[0].company}}</div>
+                <div><i class="material-icons">email</i> {{user[0].email}} </div>
+                <div><i class="material-icons">phone</i>{{user[0].phone}}</div>
+                <div ng-repeat="note in user[1] track by $index">
                     <h5>Notes</h5>
                     <div>
                         <div>
-                            <div><span>#1</span></div>
+                            <div><span> {{ $index }} </span></div>
                             <p>Aliqua enim amet velit cillum consequat cupidatat non voluptate occaecat pariatur duis incididunt sint. Eu ullamco exercitation eiusmod reprehenderit excepteur sint magna. Excepteur est enim in irure deserunt eu. Reprehenderit nulla in exercitation elit deserunt. Voluptate elit nisi esse enim est aliqua occaecat.</p>
                         </div>
                         <div>

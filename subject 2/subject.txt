@@ -191,7 +191,7 @@ Il est plus important de sécuriser le serveur puisque c'est celui qui contient 
 
 l) Pourquoi [1, 2, 3, () => "boom"][Number(true) + 2]() === "boom" ? Expliquez le plus précisément possible.
 
-C'est un tableau à deux dimensions qui est constitué d'un tableau de chiffre qui intégre une fonction fléché (ES6) 
+C'est un tableau constitué d'un tableau de chiffre qui intégre une fonction fléché (ES6) 
 sans paramètre et qui prend pour expression la chaine de caractères "boom" ET d'un second tableau composé de l'objet Number
 avec comme valeur true auquel s'ajoute le nombre 2.
 

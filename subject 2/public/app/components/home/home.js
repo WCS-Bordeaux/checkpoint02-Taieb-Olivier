@@ -3,10 +3,15 @@
 angular.module('wildNoteApp')
 
     .component('home', {
-        url: '/app/components/home/home.html',
+        templateUrl: '/app/components/home/home.html',
         controller: Home
     })
 
-function Home() {
+function Home($http) {
+    const that = this;
+    $http.get('/users').then(function(Result){
+        console.log(Result)
+        that.users = Result.data
+    })
 }
 
